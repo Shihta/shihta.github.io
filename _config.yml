@@ -9,18 +9,17 @@ gems                : ["jekyll-paginate"]
 permalink           : pretty
 
 # Setup
-title               : Rhadow's Tech Note
-tagline             : 'JavaScript, front-end, and web development articles'
-description         : 'News, articles and reviews of a variety of web development frameworks and modules.'
+title               : "Shihta's Note"
+tagline             : 'tag line'
+description         : 'descriptions'
 baseurl             : /
 
-author              : Howard Chang
-name                : 'Howard Chang'
-url                 : https://rhadow.github.io/
+author              : Shihta Kuan
+name                : 'Shihta Kuan'
+url                 : https://shihta.github.io/
 
 paginate            : 5
 
 # Custom vars
 version             : 0.1.0
-twitter_username    : Rhadow3433
-github_username     : Rhadow
+github_username     : Shihta
