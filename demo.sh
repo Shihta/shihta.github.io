@@ -1,2 +1,2 @@
 #!/bin/bash
-jekyll build;jekyll serve
+jekyll build;jekyll serve -H 0.0.0.0

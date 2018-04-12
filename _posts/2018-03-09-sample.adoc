@@ -1,0 +1,33 @@
+---
+layout     : post
+title      : "The sample"
+subtitle   : ""
+date       : 2018-03-09
+author     : "Shihta"
+tags       :
+comments   : true
+---
+= Sample Page
+:uri-asciidoctor: http://asciidoctor.org
+
+This is a sample page composed in AsciiDoc.
+Jekyll converts it to HTML using {uri-asciidoctor}[Asciidoctor].
+
+[source,ruby]
+puts "Hello, World!"
+
+== GoTest
+
+Setting up the development environment with Sublime Text::
+  . Install the **Environment Settings** to set your **GOPATH**
+  . Install the **Golang Build** for the build system, **GoSublime** for formatting your code automatically
+  . Modify the project setting file to fix your real GOPATH
+  . Re-open your sublime
+
+TODO::
+  . bazel
+
+References::
+  . bash autocomplete: `https://github.com/posener/complete`
+  . Installing Go 1.9 on Ubuntu 16.04: `https://www.samclarke.com/installing-go-1-9-on-ubuntu-16-04/`
+  . go build on Raspberry PI (ARM): `https://blog.longwin.com.tw/2018/03/golang-compile-code-for-raspberry-pi-arm-2018/`
