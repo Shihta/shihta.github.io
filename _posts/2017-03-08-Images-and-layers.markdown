@@ -12,7 +12,7 @@ comments   : true
 
 Layers的概念可參考下圖，官方文件可參考[這裡][1]
 
-![ubuntu 15.04 image](/public/2017-03-08/sharing-layers.jpg)
+![ubuntu 15.04 image](/static/2017-03-08/sharing-layers.jpg)
 
 其中每一個Layer就代表Dockerfile中的一行指令
 
@@ -38,7 +38,7 @@ COPY dockerfiles/php/5.6/apache/apache2-foreground.overwrite /usr/local/bin/apac
 
 分析這些Images的Layers，結果如下：
 
-![Layers of Docker Image](/public/2017-03-08/Layers-of-Docker-Image.png)
+![Layers of Docker Image](/static/2017-03-08/Layers-of-Docker-Image.png)
 
 因此可以基於`buildpack-deps:jessie`建構一個屬於我們的base image，之後再基於該base image建構每個service
 

@@ -1,13 +1,13 @@
 ---
 layout     : post
-title      : "The sample"
+title      : "AsciiDoc Sample Page"
 subtitle   : ""
 date       : 2018-03-09
 author     : "Shihta"
 tags       :
 comments   : true
 ---
-= Sample Page
+= AsciiDoc Sample Page
 :uri-asciidoctor: http://asciidoctor.org
 
 This is a sample page composed in AsciiDoc.

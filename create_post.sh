@@ -4,4 +4,4 @@ DATE=$(date +%Y-%m-%d)
 echo $DATE-$1
 
 cat _example_post.md|sed "s/DATE/$DATE/g" > _posts/$DATE-$1.markdown
-mkdir -p public/$DATE
+mkdir -p static/$DATE

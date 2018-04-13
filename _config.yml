@@ -11,7 +11,7 @@ permalink           : pretty
 # Setup
 title               : "Shihta's Note"
 tagline             : 'tag line'
-description         : 'descriptions'
+# description         : 'descriptions'
 baseurl             : /
 
 author              : Shihta Kuan
@@ -21,5 +21,6 @@ url                 : https://shihta.github.io/
 paginate            : 5
 
 # Custom vars
-version             : 0.1.0
+version             : 0.2.0
 github_username     : Shihta
+keywords            : Gitlab,HTML5,JavaScript,Backend engineering,SublimeText,教學,DevOps

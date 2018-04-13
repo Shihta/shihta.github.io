@@ -9,16 +9,15 @@
   <!-- SEO -->
   <meta charset="utf-8">
   <meta http-equiv="content-type" content="text/html">
-  <meta name="author" content="Howard Chang">
-  <meta name="copyright" content="Howard Chang">
-  <meta name="google-site-verification" content="Y6EHO_vACb33JR6CLegTUED-tf0hwqt3auuO2yHTwwg" />
-  <meta name="keywords"
-        content="ReactJS,Flux,AngularJS,CSS,Git,HTML5,JavaScript,Front end engineering,SublimeText,Node,Unit Testing,前端工程研究, ImmutableJS, Jest, 教學">
+  <meta name="author" content="{{ site.author }}">
+  <meta name="copyright" content="{{ site.author }}">
+  <meta name="google-site-verification" content="rUfSXbJrC8BbwNvpFlvRvNTOAluX5FWzhBqkUyW-dj0" />
+  <meta name="keywords" content="{{ site.keywords }}">
 
   <link rel="contents" title="Archive" href="/Archive">
   <link rel="start" title="Shihta's Note" href="/">
 
-  {% if page.signature == true %}
+  {%- if page.signature == true %}
     <meta property="og:title" content="{{ page.title }}" >
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://shihta.github.io{{ page.url }}">
@@ -26,33 +25,31 @@
         content="{{ page.content | strip_html | truncatewords: 20 }}" >
     <meta name="description"
         content="{{ page.content | strip_html | truncatewords: 20 }}" >
-  {% else %}
+  {%- else %}
     <meta property="og:title" content="Shihta's Note" >
     <meta property="og:type" content="article" />
-    <meta property="og:description"
-        content="Waves of JavaScript, front-end, and web development articles. News, articles and reviews of a variety of web development frameworks and modules." >
-    <meta name="description"
-        content="Waves of JavaScript, front-end, and web development articles. News, articles and reviews of a variety of web development frameworks and modules.">
-  {% endif %}
+    <meta property="og:description" content="{{ site.keywords }}" >
+    <meta name="description" content="{{ site.keywords }}">
+  {%- endif %}
 
   <title>
-    {% if page.title == "Home" %}
+    {%- if page.title == "Home" %}
       {{ site.title }} &middot; {{ site.tagline }}
-    {% else %}
+    {%- else %}
       {{ page.title }} &middot; {{ site.title }}
-    {% endif %}
+    {%- endif %}
   </title>
 
   <!-- CSS -->
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/poole.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/syntax.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/hyde.css">
-  <link rel="stylesheet" href="{{ site.baseurl }}public/css/custom.min.css">
-  <link href="{{ site.baseurl }}public/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="{{ site.baseurl }}static/css/poole.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}static/css/syntax.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}static/css/hyde.css">
+  <link rel="stylesheet" href="{{ site.baseurl }}static/css/custom.min.css">
+  <link href="{{ site.baseurl }}static/css/font-awesome-4.5.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
   <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}public/apple-touch-icon-144-precomposed.png">
-  <link rel="shortcut icon" href="{{ site.baseurl }}public/favicon.ico">
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="{{ site.baseurl }}static/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="{{ site.baseurl }}static/favicon.ico">
 
   <!-- RSS -->
   <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">

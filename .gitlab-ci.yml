@@ -16,8 +16,7 @@ test:
 pages:
   stage: deploy
   script:
-  - bundle exec jekyll build
-  - mv public s; mv _site public
+  - bundle exec jekyll build -d public
   artifacts:
     paths:
     - public
