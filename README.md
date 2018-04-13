@@ -1,5 +1,6 @@
 # Shihta's Note
 
-This blog is made by Jekyll and modified by [Rhadow](https://rhadow.github.io/).
+This blog is made by Jekyll.
+The original author is [Rhadow](https://rhadow.github.io/).
 
-Please visit: [https://shihta.github.io/](https://shihta.github.io/) to view the site.
+Please visit: [https://shihta.gitlab.io/](https://shihta.gitlab.io/) to view the site.

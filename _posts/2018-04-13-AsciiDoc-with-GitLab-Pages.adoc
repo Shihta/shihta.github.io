@@ -1,0 +1,38 @@
+---
+layout     : post
+title      : "AsciiDoc with GitLab Pages"
+subtitle   : ""
+date       : 2018-04-13
+author     : "Shihta"
+tags       : AsciiDoc
+comments   : true
+---
+
+= AsciiDoc with GitLab Pages
+
+== Why?
+
+. 原本使用的是Github Pages，但是才沒用多久就發現畫面壞掉，經過查證後發現是個bug，
+  Github Pages 沒辦法在 *_config.yml* 裡面設定 *baseurl* ，這導致網頁上的路徑會出錯
+. Github Pages 原生不支援 *AsciiDoc* ，有人送了 ticket 出去，但是看來沒有回應，但我想用
+
+== Solution & Concept
+
+. 改用GitLab Pages，但是說真的其實我沒有去查過Github Pages有沒有別的做法
+. GitLab並不是內建支援某一種特別的framework，而是單純的讓你放一個靜態網頁，這意思是說：
+  .. 你可以用各種不同的Framework，只要最後輸出結果是靜態網頁即可
+  .. GitLab提供了各種不同的example project，可以去 https://gitlab.com/groups/pages[GitLab Pages examples^]
+     找看看有沒有習慣的，我個人還是使用與 Github 相同的 *jekyll*
+  .. 透過 *artifacts* 將輸出結果存起來即可，需注意 *path* 的名稱是 *public*
+. 使用免費的 shared runner 來編譯
+  .. 使用docker runner來編譯，可自行準備相關環境，因此可以額外掛上 *jekyll-asciidoc* ，細節可參考 *Gemfile*
+  .. 我有備好的 docker image 可供使用:
+     https://hub.docker.com/r/shihta/jekyll-asciidoc/[shihta/jekyll-asciidoc:gitlab^]，
+     細節可參考 *Dockerfile*
+
+Source： https://gitlab.com/shihta/shihta.gitlab.io[shihta.gitlab.io^]
+
+== References
+
+- https://pages.github.com/versions/[Github Dependency versions^]
+- https://about.gitlab.com/features/pages/[GitLab Pages^]
