@@ -23,4 +23,5 @@ paginate            : 5
 # Custom vars
 version             : 0.2.0
 github_username     : Shihta
+gitlab_username     : shihta
 keywords            : Gitlab,HTML5,JavaScript,Backend engineering,SublimeText,教學,DevOps
