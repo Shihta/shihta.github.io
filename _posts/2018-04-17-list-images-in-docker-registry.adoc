@@ -1,0 +1,14 @@
+---
+layout     : post
+title      : "List images in docker registry"
+subtitle   : ""
+date       : 2018-04-17
+author     : "Shihta"
+tags       :
+comments   : true
+---
+
+----
+curl -u docker:docker https://nexus3.onap.org:10001/v2/_catalog |python -m json.tool
+curl -u docker:docker https://nexus3.onap.org:10001/v2/onap/aaf/aaf_cm/tags/list
+----

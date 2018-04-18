@@ -1,0 +1,14 @@
+---
+layout     : post
+title      : "Translate"
+subtitle   : ""
+date       : 2018-04-16
+author     : "Shihta"
+tags       :
+comments   : true
+---
+
+== Translate
+
+. http://fanyi.youdao.com/[在线翻译_有道^]
+. https://dictionary.cambridge.org/zht/[^]

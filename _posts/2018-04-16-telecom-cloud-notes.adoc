@@ -1,0 +1,107 @@
+---
+layout     : post
+title      : "Telecom cloud notes"
+subtitle   : ""
+date       : 2018-04-16
+author     : "Shihta"
+tags       :
+comments   : true
+---
+
+ECOMP和Open-O正式合併為ONAP::
+- https://kknews.cc/tech/j8z8bke.html
+- Linux基金會旗下兩大開源MANO工作組Open-O和ECOMP日前宣布正式合併成為一個組織，開放網絡自動化平台（ONAP）。
+- 現在的問題是，這個更大的MANO組織是否能夠吸引更多的服務提供商加入，甚至是吸引其他MANO項目的加入，如ETSI NFV ISG旗下的開源MANO（OSM）項目。
+- https://wiki.onap.org/download/attachments/13598894/ONAP%20Overview%20ONAP%20Mini%20Summit%20at%20OPNFV%20Summit%20%281%29.pdf?version=1&modificationDate=1503012503000&api=v2[Introducing ONAP^]
+
+
+Controllers / Network Operating Systems::
+- image:/static/2018-04-16/history-0.png[]
+- image:/static/2018-04-16/history-1.png[]
+- image:/static/2018-04-16/Architectural-and-Design-Elements-of-SDN-Controllers.png[]
+- image:/static/2018-04-16/MEC-Logical-Architecture-in-Mobile-Operator-Network.png[]
+
+
+abbreviations::
+- MEC -- Mobile Edge Computing
+- RAN -- Radio access network
+- MANO -- management and orchestration
+- Industry Specification Group (ISG) by the European Telecommunications Standards Institute (ETSI)
+- packet core gateways (PGWs)
+- ONF -- Open Networking Foundation
+- OSS -- Operational Support System
+- BSS -- business support system
+- M-CORD -- Mobile CORD
+- CORD -- Central Office Re-architected as Datacenter
+- RSD -- Rack Scale Design
+
+
+List of abbreviations from http://www.etsi.org/images/files/ETSIWhitePapers/etsi_wp24_MEC_deployment_in_4G_5G_FINAL.pdf[ETSI White Paper No. 24^]::
+- 3GPP -- 3^rd^ Generation Partnership Project
+- 4G, 5G -- 4^th^, 5^th^ generation of mobile networks
+- AF -- Application Function
+- API -- Application Programming Interface
+- APN -- Access Point Name
+- AR -- Augmented Reality
+- BYOD -- Bring Your Own Device
+- CDN -- Content Delivery Network
+- CRAN -- Cloud RAN
+- CUPS -- Control/User Plane Separation
+- DMTF -- Distributed Management Task Force
+- DNS -- Domain Name System
+- DSCP -- Differentiated Service Code Point
+- eNB -- Evolved Node B
+- ETSI -- European Telecommunications Standards Institute
+- EPC -- Evolved Packet Core
+- GTP, GTP-U -- GPRS Tunnelling Protocol, GTP-User plane
+- HSS -- Home Subscriber Server
+- IaaS -- Infrastructure as a Service
+- IMS -- IP Multimedia Subsystem
+- IMSI -- International Mobile Subscriber Identity
+- IoT -- Internet of Things
+- IP -- Internet Protocol
+- IPMI -- Intelligent Platform Management Interface
+- IPsec -- Internet Protocol Security
+- LAN -- Local Area Network
+- LI -- Lawful Interception
+- LIPA -- Local IP Access
+- M2M -- Machine to Machine
+- MANO -- Management and Orchestration
+- MCPTT -- Mission Critical Push to Talk
+- MEC -- Multi-access Edge Computing
+- MEP -- MEC Platform
+- MME -- Mobility Management Entity
+- MNO -- Mobile Network Operator
+- NFV -- Network Functions Virtualisation
+- OAM -- Operations, Administration and Management
+- ONAP -- Open Network Automation Platform
+- PaaS -- Platform as a Service
+- PCF -- Policy Control Function
+- PDN -- Packet Data Network
+- PGW, PGW-C -- PDN Gateway, PGW Control plane
+- PoP -- Point of Presence
+
+
+主要的开源MANO项目有哪些？ https://www.sdnlab.com/19794.html[原文：白话网络编排（MANO），给你感兴趣的项目^]::
+. ONAP
+	- image:/static/2018-04-16/ONAP-architecture.png[]
+  - https://www.onap.org/[^]
+. OSM
+  - image:/static/2018-04-16/osm-open-source-mano-orchestration-telefonica-canonical-rift-io-1024x511.png[]
+  - https://osm.etsi.org/[^]
+  - RIFT.io
+. OPNFV
+  - image:/static/2018-04-16/what-is-opnfv-an-introduction-7-638.jpg[]
+  - https://www.opnfv.org/[^]
+. OpenStack Tacker
+  - image:/static/2018-04-16/Tacker-Architecture.jpg[]
+  - https://wiki.openstack.org/wiki/Tacker[^]
+. OpenMANO
+  - image:/static/2018-04-16/openmano-nfv.png[]
+  - https://github.com/nfvlabs/openmano[^]
+  - 截至今天，OpenMANO是一个非常基本的实现，不适合商业部署。
+
+
+References::
+. http://mbat-cctu.nsysu.edu.tw/data/2017-01-19/SDN-NFV_ncku_teacher.pdf[SDN/NFV 核心網路^]
+. https://gerrit.onap.org/r/#/q/status:open[ONAP resources^]
