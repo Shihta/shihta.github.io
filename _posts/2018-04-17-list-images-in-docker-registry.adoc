@@ -4,7 +4,7 @@ title      : "List images in docker registry"
 subtitle   : ""
 date       : 2018-04-17
 author     : "Shihta"
-tags       :
+tags       : Docker
 comments   : true
 ---
 

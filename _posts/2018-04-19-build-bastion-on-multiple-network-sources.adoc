@@ -1,0 +1,58 @@
+---
+layout     : post
+title      : "Build bastion on multiple network sources"
+subtitle   : ""
+date       : 2018-04-19
+author     : "Shihta"
+tags       : tunnel
+comments   : true
+---
+
+== Requirements
+
+. Virtualbox
+. Vagrant
+
+== Use bridge mode
+
+[source,ruby]
+----
+boxes = [
+  { :name => "lab-wifi", :bridge => "en0: Wi-Fi (AirPort)",     :cmd => "route add default gw 192.168.11.1"},
+  { :name => "oa",       :bridge => "en8: USB 10/100/1000 LAN", :cmd => "route add default gw 10.244.58.254"}
+]
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "ubuntu/xenial64"
+  config.vm.box_check_update = false
+  config.vm.synced_folder '.', '/vagrant', disabled: true
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 128
+    v.cpus = 1
+  end
+
+  boxes.each do |opts|
+    config.vm.define opts[:name] do |node|
+      node.vm.hostname = opts[:name]
+      node.vm.network "public_network", bridge: opts[:bridge]
+      node.vm.provision "shell", run: "always", inline: opts[:cmd]
+    end
+  end
+end
+----
+
+- Check your interface name and gateway
+- This file will create VMs by different interfaces
+
+== Set your ssh config
+
+. Add `Include ~/.ssh/config.d/*` to your ~/.ssh/config
+. `vagrant ssh-config > ~/.ssh/config.d/config`
+. Use `ssh lab-wifi` or `ssh oa` to connect your VM
+
+== References
+
+. https://www.inote.tw/adjust-mac-os-ethernet-priority[^]
+. https://superuser.com/questions/247564/is-there-a-way-for-one-ssh-config-file-to-include-another-one[^]
+. https://www.vagrantup.com/docs/networking/public_network.html[^]
+. https://app.vagrantup.com/ubuntu/boxes/xenial64[^]
