@@ -1,0 +1,27 @@
+---
+layout     : post
+title      : "Docker bash completion on Mac"
+subtitle   : ""
+date       : 2018-04-19
+author     : "Shihta"
+tags       : Docker
+comments   : true
+---
+
+----
+brew install bash-completion
+wget https://raw.githubusercontent.com/docker/docker-ce/master/components/cli/contrib/completion/bash/docker
+mv docker $(brew --prefix)/etc/bash_completion.d
+----
+
+Add following settings in your `.bashrc`
+
+----
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+----
+
+References::
+- https://github.com/docker/docker-ce/blob/master/components/cli/contrib/completion/bash/docker[^]
+- https://blog.alexellis.io/docker-mac-bash-completion/[Get Bash completion on Docker Mac^]
