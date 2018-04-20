@@ -239,6 +239,12 @@
     display: inline-block;
     margin: 0 12px 12px 0;
 }
+@media screen and (min-width: 768px) {
+    .listingblock .content {
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+}
 /* End of Archive */
 /* Other */
 
